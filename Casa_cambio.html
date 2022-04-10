@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function casa_de_cambio() {
+            var monto1 = parseInt(document.getElementById("monto").value);
+            var cambio = document.getElementsByName("CAMBIO") ;
+            if (cambio[0].checked) {
+                alert(monto1*3.71);
+            } else {
+                alert(monto1*4.06);
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center;">
+    <h1>CASA DE CAMBIO</h1>
+    <p>Seleccionar moneda a enviar</p>
+    <form action="">
+        <input type="radio" name="CAMBIO" id="Dolar" value="Dolar" >Dolar
+        <input type="radio" name="CAMBIO" id="Euro" value="Euro"  >Euro
+        <p>Ingrese monto</p>
+        <input type="text" id="monto" required>
+        <br>
+        <br>
+        <button type="button" id="button" onclick="casa_de_cambio()">Cotizar</button>
+    </form>
+</body>
+</html>
